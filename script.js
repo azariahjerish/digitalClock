@@ -49,19 +49,64 @@ setInterval(function () {
 }, 1000);
 
 
-document.getElementById("button").addEventListener("click",()=>{
-    var button=document.getElementById("button");
-    if(button.checked==true){
-        document.getElementById("hrs24").setAttribute("style","display:none");
-        document.getElementById("hrs12").setAttribute("style","display:block");
+{
+    document.getElementById("light").addEventListener("click", function (e) {
+    var time = document.getElementsByClassName("time");
+    for (i = 0; i < time.length; i++){
+        time[i].setAttribute("style", "color:black; background-color:white");
     }
-    else{
-        document.getElementById("hrs12").setAttribute("style","display:none");
-        document.getElementById("hrs24").setAttribute("style","display:block");
+    var change = document.getElementsByClassName("change");
+    for (i = 0; i < change.length; i++){
+        change[i].setAttribute("style", "color:white; background-color:black");
     }
+        document.getElementById("light").style.display = "none";
+        e.stopPropagation;
+    }) 
+    
+}
+
+{
+    document.getElementById("dark").addEventListener("click", function (e) {
+    var time = document.getElementsByClassName("time");
+    for (i = 0; i < time.length; i++){
+        time[i].setAttribute("style", "color:white; background-color:black");
+    }
+    var change = document.getElementsByClassName("change");
+    for (i = 0; i < change.length; i++){
+        change[i].setAttribute("style", "color:black; background-color:white");
+    }
+        document.getElementById("dark").style.display = "none";
+        e.stopPropagation;
+    }) 
+}
+
+var twentyfour = document.getElementById("twentyfour")
+var twelve = document.getElementById("twelve");
+
+twelve.addEventListener("click", (e) => {
+    twelve.setAttribute("style", "display:none")
+    twentyfour.setAttribute("style", "display:block")
+    e.stopPropagation;
 })
 
-// document.getElementById("body").addEventListener("click",()=>{
+twentyfour.addEventListener("click", (e) => {
+    twelve.setAttribute("style", "display:block")
+    twentyfour.setAttribute("style","display:none")
+    e.stopPropagation;
+})
 
-// })
+var hrs24 = document.getElementById("hrs24");
+var hrs12 = document.getElementById("hrs12");
 
+
+twelve.addEventListener("click", (e) => {
+    hrs24.setAttribute("style","display:none")
+    hrs12.setAttribute("style", "display:block")
+    e.stopPropagation;
+})
+
+twentyfour.addEventListener("click", (e) => {
+    hrs24.setAttribute("style","display:block")
+    hrs12.setAttribute("style","display:none")
+    e.stopPropagation;
+})
