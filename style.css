@@ -19,9 +19,6 @@ body {
     font-size: 9vw;
 }
 
-#hrs12 {
-    display: none;
-}
 
 .button {
     position: absolute;
@@ -30,16 +27,5 @@ body {
     border-radius: 3vw;
     padding: .5vw;
     font-size: 1vw;
-}
-
-.formate {
-    position: absolute;
-    color: white;
-    background-color: black;
-    border-radius: 3vw;
-    padding: .5vw;
-    font-size: 1vw;
-    top: 0;
-    right: 0;
 }
 
