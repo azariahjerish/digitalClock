@@ -24,8 +24,13 @@ body {
     position: absolute;
     color: white;
     background-color: black;
-    border-radius: 3vw;
-    padding: .5vw;
-    font-size: 1vw;
+    border-radius: 5px;
+    padding: 7px 15px ;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
